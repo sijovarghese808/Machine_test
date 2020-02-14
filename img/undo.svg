@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="play-copy" transform="translate(10.500000, 10.500000) scale(-1, 1) translate(-10.500000, -10.500000) translate(1.000000, 1.000000)">
+            <circle id="Oval" fill="#939393" cx="9.5" cy="9.5" r="9.5"></circle>
+            <g id="refresh-01" transform="translate(5.700000, 5.700000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.832">
+                <path d="M6.84,4.05333333 C6.83969445,5.69195319 5.63474809,7.08109104 4.01261115,7.31292479 C2.39047422,7.54475853 0.844646878,6.54875776 0.385350127,4.97582368 C-0.0739466237,3.40288961 0.693018344,1.73155348 2.18502209,1.05405814 C3.67702585,0.376562811 5.44015843,0.899021611 6.32218667,2.28" id="Path"></path>
+                <polyline id="Path" points="6.33333333 0.253333333 6.33333333 2.28 4.30666667 2.28"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

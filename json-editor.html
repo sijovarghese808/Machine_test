@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <title> JSON-EDIT </title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
+        <!-- ----------------for custom css style--------------------- -->
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    <body>
+        <header>
+            <div class="container-fluid">
+                <div class="row pt-sm-3 pt-2">
+                    <div class="col-md-7">
+                        <div class="d-flex">
+                           <div class="border-right pr-sm-3"><img src="img/logo.svg" class="img-fluid "></div> 
+                            <h4 class="px-sm-4 px-1">Company Name</h4>
+                        </div>
+                    </div>
+                    
+
+                   
+                    <div class="col-md-5 ">
+                            <nav class="navbar navbar-expand-lg float-right">
+                                <button class="navbar-toggler bg-primary rounded" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    
+                                    <span><i class="fas fa-arrow-down text-white"></i></span>
+                                  </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav font-weight-bolder">
+                                    <li class="nav-item active">
+                                    <a class="nav-link" href="#">Json editor</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">All Json</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">Project</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" id="userDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">settings</a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-notification mr-5 shadow animated--grow-in" aria-labelledby="userDropdown1">
+                                        <a class="dropdown-item" href="#">
+                                        
+                                           Settings-1
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            
+                                            Settings-2
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            
+                                            Settings-3
+                                        </a>
+                                        
+                                    </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            
+                                            <img class="img-fluid rounded-circle" src="img/user.svg">
+                                            
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                                <a class="dropdown-item" href="#">Profile</a>
+                                                <a class="dropdown-item" href="#">Change Password</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="index.html">Logout</a>
+                                            </div>
+                                        </li>
+                                </ul>
+                                </div>
+                            </nav>
+                        </div>
+                </div>
+
+
+
+
+            </div>
+        </header>
+
+
+<div>
+<img src="img/inner-bg.svg" class="img-fluid">
+</div>
+
+<div class=" container m-top">
+    <div class="container">
+    <div class="row py-md-0 py-2">
+        <div class="col-md-6 ">
+            <h3 class="text-white font-20">Json Editor</h3>
+        </div>
+        <div class="col-md-6">
+          <div id="demo" class="text-white float-right font-10">
+    
+        </div>
+           
+           </div>
+        </div>
+
+        <div  class="border login-border shadow rounded bg-white box-height">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                        <h4> Editor</h4>
+                </div>
+                <div class="col-sm-6 text-right">
+                   <a href="json-editor.html"> <img src="img/undo.svg"></a>
+                   <a href="json-editor.html"><img src="img/redo.svg"></a> 
+
+                    </div>
+             </div>
+        
+        <div class="row border-bottom text-dark border-grey py-sm-3">
+            <div class="col-2">
+                    <h6>Data Structure</h6>
+
+            </div>
+            <div class="col-6">
+                <h6>Data Type</h6>
+            </div>
+            <div class="col-4">
+                <h6>Remarks</h6>
+            </div>
+        </div>
+
+
+        <!-- --------------table cotent section starts--------- -->
+<!-- ----------------------first row--------------------- -->
+        <div class="row py-sm-4">
+            <div class="col-6 d-flex">
+                <div class="col-2">
+                    <ul class="list-unstyled">
+                        <li>1</li>
+
+                    </ul>
+                </div>
+                <div class="col-10 d-flex pl-1">
+
+                    <details class="pl-5">
+                        <summary id="show-div"></summary>
+                        
+                      </details>
+                      <p id="add" class="px-1"><img src="img/add.svg"></p>
+                      <p id="insert" class="px-1"><img src="img/insert.svg"></p>
+                      <p id="code-left" class="px-1"><img src="img/code left.svg" ></p>
+                      
+                     
+                </div>
+            </div>
+            <div class="col-4 d-flex">
+                <p id="add" class="px-1"><img src="img/option.svg"></p>
+    
+                
+                <div class="dropdown">
+                    <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <div class="d-flex">
+                       
+                        <p><span class="font-weight-bolder px-2"> A</span>Auto</p>
+                      </div>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenu1">
+                      <li><a href="#" data-value="a"> <span class="font-weight-bolder">A</span> Auto</a></li>
+                      <li><a href="#" data-value="b"><span class="font-weight-bolder">[]</span> Array</a></li>
+                      <li><a href="#" data-value="c"><span class="font-weight-bolder">B</span> Boolean</a></li>
+                      <li><a href="#" data-value="d"><span class="font-weight-bolder">{ }</span>Object</a></li>
+                      <li><a href="#" data-value="f"><span class="font-weight-bolder">. .</span>String</a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+            <div class="col-2">
+                <input type="text" name="remarks" placeholder="Your Remarks" class="border-0">
+                
+            </div>
+
+            <div  id="braces" class="pl-sm-5">
+                <p class="font-weight-bolder pl-5 text-danger" >}</p>
+                
+        </div>
+
+    </div>
+        
+            <!-- -------second-row------ -->
+
+            <div class="row" id="views">
+                <div class="col-6 d-flex">
+                    <div class="col-2">
+                        <ul class="list-unstyled">
+                            <li>2</li>
+
+                        </ul>
+                    </div>
+                    <div class="col-10 d-flex  pl-2">
+
+                        <details class="pl-5">
+                            <summary id="show-div2"></summary>
+                          </details>
+                          <p class=" text-danger">Key :<span class="px-1">{</span></p>
+                          
+                          
+                         
+                    </div>
+                </div>
+                <div class="col-4 d-flex">
+                    <p id="add" class="px-1"><img src="img/option.svg"></p>
+        
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <div class="d-flex">
+                           
+                            <p><span class="font-weight-bolder px-2"> A</span>Auto</p>
+                          </div>
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenu1">
+                          <li><a href="#" data-value="a"> <span class="font-weight-bolder">A</span> Auto</a></li>
+                          <li><a href="#" data-value="b"><span class="font-weight-bolder">[]</span> Array</a></li>
+                          <li><a href="#" data-value="c"><span class="font-weight-bolder">B</span> Boolean</a></li>
+                          <li><a href="#" data-value="d"><span class="font-weight-bolder">{ }  </span> Object    </a></li>
+                          <li><a href="#" data-value="f"><span class="font-weight-bolder">. .</span>String</a></li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+                <div class="col-2">
+                    <input type="text" name="remarks" placeholder="Your Remarks" class="border-0">
+                    
+                </div>
+            
+
+            <div  id="braces1" class="pl-sm-5">
+                <p class="font-weight-bolder pl-5 text-danger" >}</p>
+                <p class="font-weight-bolder pl-4 text-danger" >}</p>
+        </div>
+    </div>
+            <!-- ----------------third row strats------ -->
+
+            <div class="row" id="views2">
+                <div class="col-6 d-flex">
+                    <div class="col-2">
+                        <ul class="list-unstyled">
+                            <li>3</li>
+
+                        </ul>
+                    </div>
+                    <div class="col-10 d-flex  pl-3">
+
+                        <details class="pl-5">
+                            <summary id="show-div3"></summary>
+                          </details>
+                          <p class="text-danger">Key :<span class="px-1">{</span></p>
+                          
+                          
+                         
+                    </div>
+                </div>
+                <div class="col-4 d-flex">
+                    <p id="add" class="px-1"><img src="img/option.svg"></p>
+        
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <div class="d-flex">
+                           
+                            <p><span class="font-weight-bolder px-2"> A</span>Auto</p>
+                          </div>
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenu1">
+                          <li><a href="#" data-value="a"> <span class="font-weight-bolder">A</span> Auto</a></li>
+                          <li><a href="#" data-value="b"><span class="font-weight-bolder">[]</span> Array</a></li>
+                          <li><a href="#" data-value="c"><span class="font-weight-bolder">B</span> Boolean</a></li>
+                          <li><a href="#" data-value="d"><span class="font-weight-bolder">{ }  </span> Object    </a></li>
+                          <li><a href="#" data-value="f"><span class="font-weight-bolder">. .</span>String</a></li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+                <div class="col-2">
+                    <input type="text" name="remarks" placeholder="Your Remarks" class="border-0">
+                    
+                </div>
+            <div  id="braces2" class="pl-sm-5">
+                <p class="font-weight-bolder pl-5 text-danger" >}</p>
+                <p class="font-weight-bolder pl-4 text-danger" >}</p>
+                <p class="font-weight-bolder pl-3 text-danger" >}</p>
+        </div>
+        </div>
+             <!-- ----------------forth row strats------ -->
+
+             <div class="row" id="views3">
+                <div class="col-6 d-flex">
+                    <div class="col-2">
+                        <ul class="list-unstyled">
+                            <li>4</li>
+
+                        </ul>
+                    </div>
+                    <div class="col-10 d-flex  pl-4">
+
+                        <details class="pl-5">
+                            <summary id="show-div4"></summary>
+                          </details>
+                          <p class=" text-danger">Key :<span class="px-1">{</span></p>
+                          
+                          
+                         
+                    </div>
+                </div>
+                <div class="col-4 d-flex">
+                    <p id="add" class="px-1"><img src="img/option.svg"></p>
+        
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <div class="d-flex">
+                           
+                            <p><span class="font-weight-bolder px-2"> A</span>Auto</p>
+                          </div>
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenu1">
+                          <li><a href="#" data-value="a"> <span class="font-weight-bolder">A</span> Auto</a></li>
+                          <li><a href="#" data-value="b"><span class="font-weight-bolder">[]</span> Array</a></li>
+                          <li><a href="#" data-value="c"><span class="font-weight-bolder">B</span> Boolean</a></li>
+                          <li><a href="#" data-value="d"><span class="font-weight-bolder">{ }  </span> Object    </a></li>
+                          <li><a href="#" data-value="f"><span class="font-weight-bolder">. .</span>String</a></li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+                <div class="col-2">
+                    <input type="text" name="remarks" placeholder="Your Remarks" class="border-0">
+                    
+                </div>
+            <div  id="braces3" class="pl-sm-5">
+                <p class="font-weight-bolder pl-5 text-danger" >}</p>
+                <p class="font-weight-bolder pl-4 text-danger" >}</p>
+                <p class="font-weight-bolder pl-3 text-danger" >}</p>
+                <p class="font-weight-bolder pl-2 text-danger" >}</p>
+        </div>
+        </div>
+
+         <!-- ----------------fifth row strats------ -->
+
+         <div class="row" id="views4">
+            <div class="col-6 d-flex">
+                <div class="col-2">
+                    <ul class="list-unstyled">
+                        <li>5</li>
+
+                    </ul>
+                </div>
+                <div class="col-10 d-flex pl-sm-5">
+
+                    <details class="pl-5">
+                        <summary id=""></summary>
+                      </details>
+                      <p class=" text-danger">Key :<span class="px-1">{</span></p>
+                      
+                      
+                     
+                </div>
+            </div>
+            <div class="col-4 d-flex">
+                <p id="add" class="px-1"><img src="img/option.svg"></p>
+    
+                
+                <div class="dropdown">
+                    <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <div class="d-flex">
+                       
+                        <p><span class="font-weight-bolder px-2"> A</span>Auto</p>
+                      </div>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu text-center" aria-labelledby="dropdownMenu1">
+                      <li><a href="#" data-value="a"> <span class="font-weight-bolder">A</span> Auto</a></li>
+                      <li><a href="#" data-value="b"><span class="font-weight-bolder">[]</span> Array</a></li>
+                      <li><a href="#" data-value="c"><span class="font-weight-bolder">B</span> Boolean</a></li>
+                      <li><a href="#" data-value="d"><span class="font-weight-bolder">{ }  </span> Object    </a></li>
+                      <li><a href="#" data-value="f"><span class="font-weight-bolder">. .</span>String</a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+            <div class="col-2">
+                <input type="text" name="remarks" placeholder="Your Remarks" class="border-0">
+                
+            </div>
+        <div  id="braces4" class="pl-sm-5">
+            <p class="font-weight-bolder pl-5 text-danger" >}</p>
+            <p class="font-weight-bolder pl-4 text-danger" >}</p>
+            <p class="font-weight-bolder pl-3 text-danger" >}</p>
+            <p class="font-weight-bolder pl-2 text-danger" >}</p>
+            <p class="font-weight-bolder pl-1 text-danger" >}</p>
+    </div>
+    </div>
+
+            
+
+
+
+
+   
+
+
+    </div>
+
+</div>
+</div>
+</div>    
+        <!------------------------ footer section------------- -->
+
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 
+    <!-------------- for custom javascript------------ -->
+    <!-- ----script for time ------->
+    <script>
+     var d = new Date();
+     document.getElementById("demo").innerHTML = d;
+     </script>
+     <!-- ---------script for dropdown -->
+     <script>
+         $(".dropdown-menu li a").click(function(){
+         $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+         $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+         });
+     </script>
+     <!-------- to hide json table 2nd row ---------->
+
+     <script>
+         $(document).ready(function(){
+              $("#views").hide(),
+           $("#show-div").click(function(){
+            $("#braces").hide(1000),
+             $("#views").show(1000);
+           });
+         });
+         </script>
+          <!-------- to hide json table 3rd row ---------->
+
+     <script>
+         $(document).ready(function(){
+              $("#views2").hide(),
+              $("#braces2").hide(),
+           $("#show-div2").click(function(){
+            $("#braces1").hide(),
+            $("#braces2").show(),
+             $("#views2").show(1000);
+
+           });
+         });
+         </script>
+         <script>
+            $(document).ready(function(){
+                 $("#views3").hide(),
+                 $("#braces3").hide(),
+              $("#show-div3").click(function(){
+               $("#braces2").hide(),
+               $("#braces3").show(),
+                $("#views3").show(1000);
+   
+              });
+            });
+            </script>
+            <script>
+                $(document).ready(function(){
+                     $("#views4").hide(),
+                     $("#braces4").hide(),
+                  $("#show-div4").click(function(){
+                   $("#braces3").hide(),
+                   $("#braces4").show(),
+                    $("#views4").show(1000);
+       
+                  });
+                });
+                </script>
+   </body>
+</html>

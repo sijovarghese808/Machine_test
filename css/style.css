@@ -1,0 +1,112 @@
+.login-bg{
+    background-image:url('../img/login-bg.svg');
+    background-size: cover;
+}
+.login-border{border:2px solid grey;
+    overflow-x:auto;
+
+}
+
+
+/* ------------------form styles----------------- */
+.input-group-prepend{
+            background-color: white!important;
+    
+    }
+    
+    input:focus{
+        outline: 0 0 0 0  !important;
+        box-shadow: 0 0 0 0 !important;
+        
+        }
+    .button-size{
+        padding:6px 150px;
+    }
+    
+    .h-line p {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid grey; 
+        line-height: 0.1em;
+        margin: 10px 0 20px; 
+     } 
+     
+     .h-line p span { 
+         background:#fff; 
+         padding:0 10px;
+         color:grey; 
+     }
+
+     
+/*--------------------------- json edit page-------------- */
+.nav-link{
+    color:grey;
+
+}
+.active a{
+    color:black!important;
+}
+.nav-link:hover{
+    transform:scale(1.1);
+    color:black;
+
+
+}
+.border-grey{
+    color:grey;
+}
+.m-top{
+    
+    position: absolute;
+    
+    margin-top:-200px;
+    left:100px;
+    
+}
+.box-height{
+    height:400px;
+
+}
+
+/* -------------------------media query starts------------------------ */
+
+    @media (max-width:768px){
+        .button-size{
+            padding:5px 50px;
+            font-weight: lighter;
+        }
+        /* -----------------signin page------------ */
+     .fontawsome-size{
+         font-size:10px;
+     }
+         /* --------------json-editor page----------------------------- */
+         .m-top{
+    
+            position: absolute;
+            
+            margin-top:-80px;
+            left:0px;
+            
+        }
+        .font-20{
+            font-size: 20px;
+        }
+        .font-10{
+            font-size: 10px;
+            color:black;
+        }
+
+    }
+
+    @media (min-width:769px) and (max-width:1024px){
+        .button-size{
+            padding:5px 100px;
+        }
+        .m-top{
+    
+            position: absolute;
+            
+            margin-top:-180px;
+            left:0px;
+
+    }
